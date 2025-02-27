@@ -1,0 +1,3 @@
+{"key":"1e9ceef136d909c3573cf5e77501758f7c7736fc256963b3fef1a9a5114da024","value":{"header":{"prev_hash":"0000000000000000000000000000000000000000000000000000000000000000","time":1740643237917981000},"mandates":null}}
+{"key":"6e45ee15ee384b2fc715fca1709ca0ae67dc7f689ed24d89d2917df5a216d471","value":{"header":{"prev_hash":"1e9ceef136d909c3573cf5e77501758f7c7736fc256963b3fef1a9a5114da024","time":1740643237918386000},"mandates":[{"from":"KPU","to":"shellrean","value":1},{"from":"KPU","to":"loka","value":1}]}}
+{"key":"53758564f1cf075cf561bcc81124654f3e13f2d0d62beb35486c17c8559cf0ba","value":{"header":{"prev_hash":"6e45ee15ee384b2fc715fca1709ca0ae67dc7f689ed24d89d2917df5a216d471","time":1740643250852728000},"mandates":[{"from":"KPU","to":"namira","value":1}]}}
