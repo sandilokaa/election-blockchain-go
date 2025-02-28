@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 )
 
 type Blockchain struct {
@@ -92,4 +93,13 @@ func (bc *Blockchain) CalculateMandate(usr string) int64 {
 		}
 	}
 	return total
+}
+
+func (bc *Blockchain) PlenaryRecap() {
+	for range time.Tick(time.Second * 10) {
+		log.Println("plenary-recap: ", time.Now().Format(time.TimeOnly))
+		if len(bc.Pool) > 0 {
+			bc.CreateBlock(bc.LastestBlock().Hash())
+		}
+	}
 }
