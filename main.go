@@ -1,7 +1,7 @@
 package main
 
 import (
-	"blockhain-go/domain"
+	"election-blockchain-go/domain"
 	"encoding/json"
 	"fmt"
 )
