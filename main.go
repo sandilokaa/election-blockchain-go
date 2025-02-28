@@ -1,18 +1,19 @@
 package main
 
 import (
+	"election-blockchain-go/api"
 	"election-blockchain-go/domain"
-	"encoding/json"
-	"fmt"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
 	bc := domain.NewBlockchain()
 
-	bc.GiveMandate("KPU", "shellrean", 1)
-	bc.GiveMandate("KPU", "namira", 1)
-	bc.CreateBlock(bc.LastestBlock().Hash())
+	go bc.PlenaryRecap()
 
-	data, _ := json.Marshal(bc)
-	fmt.Println(string(data))
+	app := fiber.New()
+	api.NewBlockchain(app, bc)
+
+	_ = app.Listen(":8000")
 }
