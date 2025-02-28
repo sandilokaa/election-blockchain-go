@@ -9,7 +9,7 @@ import (
 func main() {
 	bc := domain.NewBlockchain()
 
-	// bc.GiveMandate("KPU", "shellrean", 1)
+	bc.GiveMandate("KPU", "shellrean", 1)
 	bc.GiveMandate("KPU", "namira", 1)
 	bc.CreateBlock(bc.LastestBlock().Hash())
 
